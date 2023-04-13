@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Truculenta&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Roboto"],
+          },
+          fontSize: {
+            font1620: ["16px", "20px"],
+            font1622: ["16px", "22px"],
+            font1624: ["16px", "24px"],
+            font1825: ["18px", "25px"],
+            font1926: ["19px", "26px"],
+            font2028: ["20px", "28px"],
+            font2229: ["22px", "29px"],
+            font2834: ["28px", "34px"],
+            font3440: ["34px", "40px"],
+            font5050: ["50px", "50px"],
+            font5262: ["52px", "62px"],
+            font5562: ["55px", "62px"],
+            font5662: ["56px", "62px"],
+            font6875: ["68px", "75px"],
+          },
+          letterSpacing: {
+            tightest: "-.075em",
+            tighter: "-.05em",
+            tight: "-.025em",
+            normal: "1px",
+            wide: ".025em",
+            wider: ".05em",
+            widest: ".1em",
+            widest: ".25em",
+          },
+          borderRadius: {
+            sm: "8px",
+            xl: "30px",
+          },
+          extend: {
+            colors: {
+              white: "#FFFFFF",
+              black: "#000000",
+              heading: "#222222",
+              text: "#555555",
+              accent: "#FFD338",
+              greyLight: "#999999",
+              greyDark: "#666666",
+              lightBg: "#FFF9E8",
+              darkBg: "#F0ECFF",
+            },
+            backgroundImage: {
+              wave: "url('/src/images/wave.svg')",
+            },
+            dropShadow: {
+              xl: "4px 4px 0px #FFD338",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --swiper-theme-color: #ffd338;
+      }
+      .swiper-pagination-bullet {
+        width: var(
+          --swiper-pagination-bullet-width,
+          var(--swiper-pagination-bullet-size, 10px)
+        );
+        height: var(
+          --swiper-pagination-bullet-height,
+          var(--swiper-pagination-bullet-size, 10px)
+        );
+      }
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after,
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: "";
+      }
+      .swiper-button-prev,
+      .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, 0px);
+      }
+      .swiper-button-next,
+      .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, 0px);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="font-sans pt-4">
+    <header class="mb-6 px-2">
+      <div
+        class="flex justify-between lg:max-w-[1090px] items-center h-20 lg:h-[157px] mx-auto"
+      >
+        <img
+          src="./src/images/logo.png"
+          alt="Superpeer logo"
+          class="h-12 sm:h-[113px] lg:transform lg:-translate-x-[104px]"
+        />
+        <button
+          class="h-10 flex items-center border border-heading rounded-sm font-sans text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-2"
+        >
+          Sign in
+        </button>
+      </div>
+    </header>
+    <main>
+      <section
+        class="max-w-[1026px] mx-auto sm:mt-10 px-2 lg:px-4 xl:px-0 flex flex-col lg:flex-row lg:h-[643px]"
+      >
+        <div
+          class="flex flex-col items-center lg:items-start justify-center pt-[10px] pb-[30px] lg:pt-[70px] lg:pb-[80px] lg:pr-[40px] lg:w-[478px]"
+        >
+          <h1
+            class="text-font3440 text-center sm:text-font6875 lg:text-left pb-[26px]"
+          >
+            A video platform for the world’s leading minds
+          </h1>
+          <p
+            class="text-font1620 sm:text-font2028 pb-[31px] text-justify text-text max-w-[401px]"
+          >
+            Superpeer gives you the tools you need to have paid 1:1 video calls
+            and livestreams with your audience and paid subscribers.
+          </p>
+          <button
+            class="bg-accent uppercase h-12 flex items-center border rounded-sm font-sans text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-1"
+          >
+            REQUEST INVITE
+          </button>
+        </div>
+        <img
+          src="./src/images/hero.png"
+          class="lg:absolute lg:left-[50%] mb-3 object-contain lg:transform lg:-translate-x-[35px] mx-auto"
+        />
+      </section>
+      <section
+        class="bg-lightBg mt-1 sm:mb-[94px] bg-gradient-to-b from-transparent via-transparent to-white bg-lightBg"
+      >
+        <div
+          class="h-10 sm:h-20 bg-wave bg-no-repeat lg:bg-repeat bg-center bg-cover lg:bg-contain"
+        ></div>
+        <div class="px-2 max-w-[1026px] mx-auto">
+          <h2
+            class="text-font2834 text-center text-heading sm:text-font5262 tracking-normal pt-8 lg:pt-[109px] pb-[25px]"
+          >
+            Take 1:1 Video Calls
+          </h2>
+          <p
+            class="text-font1620 sm:text-font2028 pb-[30px] lg:pb-[100px] text-center text-text lg:max-w-[674px] mx-auto"
+          >
+            Join best-selling authors, TED speakers, YouTubers, and advisors
+            using Superpeer to earn online!
+          </p>
+          <div class="flex flex-col">
+            <div
+              class="flex flex-col md:flex-row-reverse lg:h-[316px] lg:gap-[40px] lg:justify-end lg:items-start"
+            >
+              <div>
+                <h3 class="text-font2229 text-heading lg:pt-[69px] pb-2">
+                  1. Pick your own schedule
+                </h3>
+                <p
+                  class="text-font1825 text-text text-justify pb-[20px] lg:w-[304px]"
+                >
+                  You have total control over your availability. Superpeer
+                  checks your calendar and only accepts bookings when you are
+                  free.
+                </p>
+              </div>
+              <div class="flex items-center justify-center">
+                <img
+                  src="./src/images/section1-1.png"
+                  alt="mobile with schedule"
+                  class="lg:w-[270px] lg:h-[530px] pb-[20px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-col-reverse lg:h-[726px] mx-auto lg:justify-end lg:gap-[40px]"
+            >
+              <div class="flex flex-col lg:max-w-[327px]">
+                <h3 class="text-font2229 text-heading">2. Set your rate</h3>
+                <p class="text-font1825 text-text text-justify pb-[17px]">
+                  Superpeer automatically collects payments for you via credit
+                  card or PayPal with automatic refunds and no-show protection.
+                </p>
+              </div>
+              <div class="">
+                <img
+                  src="./src/images/section1-2.png"
+                  alt="tablet with settings"
+                  class="pb-[20px] lg:pb-0 lg:w-[850px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row lg:h-[187px] lg:gap-[40px] lg:items-end lg:justify-end"
+            >
+              <div class="lg:max-w-[330px]">
+                <h3 class="text-font2229 text-heading pb-2 lg:text-right">
+                  3. Meet right in the browser
+                </h3>
+                <p
+                  class="text-font1825 text-text text-justify pb-[20px] lg:text-right"
+                >
+                  No apps or downloads required. Simply hop into calls right
+                  from the calendar invite into the browser.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center lg:w-[270px] lg:h-[530px]"
+              >
+                <img
+                  src="./src/images/section1-3.png"
+                  alt="mobile with meeting"
+                  class="pb-[20px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-darkBg bg-gradient-to-b from-transparent via-transparent to-white bg-darkBg pt-[33px]"
+      >
+        <div class="px-2 max-w-[1026px] mx-auto">
+          <h2
+            class="text-font2834 text-center text-heading sm:text-font5262 tracking-normal pt-8 lg:pt-[109px] pb-[25px]"
+          >
+            Beautiful Livestreams
+          </h2>
+          <p
+            class="text-font1620 sm:text-font2028 pb-[30px] lg:pb-[100px] text-center text-text lg:max-w-[674px] mx-auto"
+          >
+            Superpeer Channels allow you to host livestreams, build a community
+            and earn with recurring monthly subscriptions.
+          </p>
+          <div class="flex flex-col">
+            <div
+              class="flex flex-col md:flex-row-reverse lg:h-[316px] lg:gap-[40px] lg:justify-end lg:items-start"
+            >
+              <div>
+                <h3 class="text-font2229 text-heading lg:pt-[69px] pb-2">
+                  1. Turn your audience into subscribers
+                </h3>
+                <p
+                  class="text-font1825 text-text text-justify pb-[20px] lg:w-[304px]"
+                >
+                  Superpeer channels are designed to accrue subscribers and
+                  automatically send them a calendar invite each time you do
+                  another stream.
+                </p>
+              </div>
+              <div class="flex items-center justify-center">
+                <img
+                  src="./src/images/section2-1.png"
+                  alt="mobile with schedule"
+                  class="lg:w-[270px] lg:h-[530px] pb-[20px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-col-reverse lg:h-[726px] mx-auto lg:justify-end lg:gap-[40px]"
+            >
+              <div class="flex flex-col lg:max-w-[327px]">
+                <h3 class="text-font2229 text-heading">
+                  2. Livestream with small groups or thousands of viewers
+                </h3>
+                <p class="text-font1825 text-text text-justify pb-[17px]">
+                  Superpeer gives you tools to let your viewers go live with you
+                  and speak, comment and upvote, and network with each other.
+                </p>
+              </div>
+              <div class="">
+                <img
+                  src="./src/images/section2-2.png"
+                  alt="tablet with settings"
+                  class="pb-[20px] lg:pb-0 lg:w-[850px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row lg:h-[187px] lg:gap-[40px] lg:items-end lg:justify-end"
+            >
+              <div class="lg:max-w-[330px]">
+                <h3 class="text-font2229 text-heading pb-2 lg:text-right">
+                  3. Earn recurring revenue through subscriptions
+                </h3>
+                <p
+                  class="text-font1825 text-text text-justify pb-[20px] lg:text-right"
+                >
+                  Sell tickets to streams, introduce channel subscription fees,
+                  allow donations, or make it totally free.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center lg:w-[270px] lg:h-[530px]"
+              >
+                <img
+                  src="./src/images/section2-3.png"
+                  alt="mobile with meeting"
+                  class="pb-[20px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section
+        class="bg-darkBg bg-gradient-to-b from-transparent via-transparent to-white bg-darkBg pt-[33px]"
+      >
+        <div class="px-2">
+          <h2
+            class="text-font2834 text-center text-heading sm:text-font5262 tracking-normal pb-[25px]"
+          >
+            Beautiful Livestreams
+          </h2>
+          <p
+            class="text-font1620 sm:text-font2028 pb-[30px] text-center text-text"
+          >
+            Superpeer Channels allow you to host livestreams, build a community
+            and earn with recurring monthly subscriptions.
+          </p>
+          <div>
+            <div class="sm:flex">
+              <div>
+                <h3 class="text-font2229 text-heading">
+                  1. Turn your audience into subscribers
+                </h3>
+                <p class="text-font1825 text-text text-justify pb-[20px]">
+                  Superpeer channels are designed to accrue subscribers and
+                  automatically send them a calendar invite each time you do
+                  another stream.
+                </p>
+              </div>
+              <div class="flex items-center justify-center">
+                <img
+                  src="./src/images/section2-1.png"
+                  alt="mobile with settings"
+                  class="w-2/3 pb-[20px]"
+                />
+              </div>
+            </div>
+            <div class="sm:flex">
+              <div>
+                <h3 class="text-font2229 text-heading">
+                  2. Livestream with small groups or thousands of viewers
+                </h3>
+                <p class="text-font1825 text-text text-justify pb-[20px]">
+                  Superpeer gives you tools to let your viewers go live with you
+                  and speak, comment and upvote, and network with each other.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="./src/images/section2-2.png"
+                  alt="tablet with meeting"
+                  class="pb-[20px]"
+                />
+              </div>
+            </div>
+            <div class="sm:flex">
+              <div>
+                <h3 class="text-font2229 text-heading">
+                  3. Earn recurring revenue through subscriptions
+                </h3>
+                <p class="text-font1825 text-text text-justify pb-[20px]">
+                  Sell tickets to streams, introduce channel subscription fees,
+                  allow donations, or make it totally free.
+                </p>
+              </div>
+              <div class="flex items-center justify-center">
+                <img
+                  src="./src/images/section2-3.png"
+                  alt="mobile with balance"
+                  class="w-2/3 pb-[20px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section
+        class="px-2 pt-[30px] pb-8 sm:pb-60 flex flex-col items-center justify-center text-text sm:pt-[161px]"
+      >
+        <h2
+          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] sm:pb-[77px]"
+        >
+          Features
+        </h2>
+        <div
+          class="grid gap-y-4 grid-cols-1 grid-rows-6 sm:gap-y-[67px] gap-x-[30px] sm:grid-cols-3 sm:grid-rows-2"
+        >
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-1.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              Subscriber Management Tools
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              Superpeer makes it easy for you to learn more about your
+              subscribers with email management and analytics tools.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-2.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              Recordings
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              High quality video and audio recordings are available instantly
+              for publishing and download.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-3.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              Transcription
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              Every stream is recorded and transcribed automatically at no
+              additional cost to you (coming soon!)
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-4.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              Members-only Channels
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              You can require an approval before someone can subscribe to your
+              channel. This is great for client-only or employee-only channels.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-5.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              No Monthly Costs
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              Superpeer is free to use, we only make money when you make money.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-start pb-[31px] max-w-[322px]"
+          >
+            <img
+              src="./src/images/feature-6.svg"
+              alt="feature icon"
+              class="w-[58px] pb-[17px]"
+            />
+            <h3 class="text-font1926 sm:text-font2229 text-heading pb-2">
+              No Expensive Gear Required
+            </h3>
+            <p class="text-font1620 text-center sm:text-font1825">
+              Livestream just as easily as getting on a FaceTime call, without
+              high-end microphones or cameras—and it looks amazing!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bg-lightBg pt-[29px] pb-[59px] px-2">
+        <h2
+          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] sm:pb-[57px]"
+        >
+          Pricing
+        </h2>
+        <div class="relative lg:w-[886px] mx-auto">
+          <div class="swiper mySwiper static lg:w-[744px] h-[255px] px-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex items-start justify-center">
+                <div
+                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                >
+                  <h4 class="text-font1926 pb-2.5">1:1 Calls</h4>
+                  <div class="text-font5050 pb-[26px]">
+                    <span class="line-through text-greyDark mr-4">10%</span>
+                    <span>0%</span>
+                  </div>
+                  <p class="text-font1622 text-greyLight">
+                    Just Credit Card fees - 3%
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide flex items-start justify-center">
+                <div
+                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                >
+                  <h4 class="text-font1926 pb-2.5">Channels</h4>
+                  <div class="text-font5050 pb-[26px]">
+                    <span>10%</span>
+                  </div>
+                  <p class="text-font1622 text-greyLight">
+                    Plus Credit Card fees - 3%
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide flex items-start justify-center">
+                <div
+                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                >
+                  <h4 class="text-font1926 pb-2.5">1:1 Calls</h4>
+                  <div class="text-font5050 pb-[19px]">
+                    <span class="line-through text-greyDark mr-4">10%</span>
+                    <span>0%</span>
+                  </div>
+                  <p class="text-font1622 text-greyLight">
+                    Just Credit Card fees - 3%
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide flex items-start justify-center">
+                <div
+                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                >
+                  <h4 class="text-font1926 pb-2.5">Channels</h4>
+                  <div class="text-font5050 pb-[26px]">
+                    <span>10%</span>
+                  </div>
+                  <p class="text-font1622 text-greyLight">
+                    Plus Credit Card fees - 3%
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next w-[50px]">
+              <img src="./src/images/arrow2.svg" alt="right button" />
+            </div>
+            <div class="swiper-button-prev w-[50px]">
+              <img src="./src/images/arrow1.svg" alt="left button" />
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex flex-col items-center justify-center pt-8 sm:pt-[246px] px-2"
+      >
+        <h2
+          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] sm:pb-[25px]"
+        >
+          Ready&nbsp;to&nbsp;become&nbsp;a Superpeer?
+        </h2>
+        <p
+          class="text-font1620 sm:text-font2028 pb-8 text-center text-text max-w-[400px]"
+        >
+          Build and grow your community face-to-face and make money while you do
+          it.
+        </p>
+        <button
+          class="bg-accent uppercase h-12 flex items-center border rounded-sm font-sans text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-1"
+        >
+          REQUEST INVITE
+        </button>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="flex justify-center flex-col gap-8 pt-10 pb-10 sm:flex-row items-center justify-between sm:pt-[225px] sm:pb-[128px] text-font1624 text-heading w-full max-w-[1026px] mx-auto px-2"
+      >
+        <ul class="flex gap-8 sm:w-1/3">
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Privacy</a></li>
+          <li><a href="#" class="hover:underline">Terms</a></li>
+        </ul>
+        <div class="flex justify-center sm:w-1/3 gap-6">
+          <a href="https://twitter.com/" target="_blank"
+            ><img
+              src="./src/images/twitter.svg"
+              alt="twitter link"
+              class="hover:scale-150"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              src="./src/images/instagram.svg"
+              alt="instagram link"
+              class="hover:scale-150"
+          /></a>
+        </div>
+        <p class="sm:w-1/3 text-right">Superpeer, Inc.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
