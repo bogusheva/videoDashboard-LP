@@ -95,38 +95,46 @@
       }
       .swiper-button-prev,
       .swiper-rtl .swiper-button-next {
-        left: var(--swiper-navigation-sides-offset, 0px);
+        left: var(--swiper-navigation-sides-offset, 10px);
+        top: 45%;
       }
       .swiper-button-next,
       .swiper-rtl .swiper-button-prev {
-        right: var(--swiper-navigation-sides-offset, 0px);
+        right: var(--swiper-navigation-sides-offset, 10px);
+        top: 45%;
+      }
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal,
+      .swiper-pagination-custom,
+      .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, -4px);
       }
     </style>
-    <title>Document</title>
+    <title>Superpeer</title>
   </head>
-  <body class="font-sans pt-4">
-    <header class="mb-6 px-2">
+  <body class="font-sans">
+    <header class="pb-6 px-2 lg:pt-5">
       <div
-        class="flex justify-between lg:max-w-[1090px] items-center h-20 lg:h-[157px] mx-auto"
+        class="flex justify-between items-center mx-auto h-20 lg:max-w-[1090px] lg:h-[140px]"
       >
         <img
           src="./src/images/logo.png"
           alt="Superpeer logo"
-          class="h-12 sm:h-[113px] lg:transform lg:-translate-x-[104px]"
+          class="h-12 sm:h-[115px] xl:transform xl:-translate-x-[108px]"
         />
         <button
-          class="h-10 flex items-center border border-heading rounded-sm font-sans text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-2"
+          class="flex items-center h-10 border border-heading rounded-sm text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-2"
         >
           Sign in
         </button>
       </div>
     </header>
-    <main>
+    <main class="relative overflow-hidden">
       <section
-        class="max-w-[1026px] flex flex-col px-2 mx-auto lg:px-4 xl:px-0 lg:flex-row lg:h-[643px] lg:mb-[57px]"
+        class="flex flex-col max-w-[1026px] px-2 mx-auto lg:flex-row lg:justify-start lg:pb-[152px] xl:px-0"
       >
         <div
-          class="flex flex-col items-center justify-center lg:items-start pt-[10px] pb-[30px] lg:pt-[50px] lg:pb-[80px] lg:pr-[40px] lg:w-[478px]"
+          class="flex flex-col items-center justify-center pt-2.5 pb-8 lg:items-start lg:pt-[70px] lg:pb-0 lg:w-[438px]"
         >
           <h1
             class="text-font3440 text-center tracking-normal sm:text-font6875 lg:text-left pb-[26px]"
@@ -147,48 +155,44 @@
         </div>
         <img
           src="./src/images/hero.png"
-          class="lg:absolute lg:left-[50%] mb-3 object-contain lg:transform lg:-translate-y-[10px] lg:-translate-x-[35px] mx-auto"
+          class="lg:absolute lg:left-[50%] mb-3 object-contain lg:transform lg:-translate-x-[35px] mx-auto"
         />
       </section>
       <section
-        class="bg-lightBg mt-1 md:mb-[45px] lg:mb-[94px] bg-gradient-to-b from-transparent via-transparent to-white bg-lightBg"
+        class="bg-lightBg bg-gradient-to-b from-transparent via-transparent to-white bg-lightBg md:mb-11 lg:mb-24"
       >
         <div
-          class="h-10 sm:h-20 bg-wave bg-cover bg-no-repeat xl:bg-repeat 2xl:bg-center 2xl:bg-contain"
+          class="h-10 bg-wave bg-cover bg-no-repeat sm:h-20 xl:bg-repeat 2xl:bg-center 2xl:bg-contain"
         ></div>
-        <div
-          class="px-2 max-w-[1045px] mx-auto pt-8 lg:pt-[100px] lg:pb-[207px]"
-        >
+        <div class="max-w-[1026px] mx-auto px-2 pt-8 lg:pt-24 lg:pb-56 xl:px-0">
           <h2
-            class="text-font2834 text-center text-heading sm:text-font5262 tracking-normal pb-[25px]"
+            class="text-font2834 text-center text-heading tracking-normal pt-1 pb-6 sm:text-font5262"
           >
             Take 1:1 Video Calls
           </h2>
           <p
-            class="text-font1620 sm:text-font2028 pb-[30px] lg:pb-[100px] text-center text-text lg:max-w-[674px] mx-auto"
+            class="text-font1620 text-center text-text mx-auto pb-8 sm:text-font2028 lg:pb-[100px] lg:max-w-[674px]"
           >
             Join best-selling authors, TED speakers, YouTubers, and advisors
             using Superpeer to earn online!
           </p>
           <div class="flex flex-col">
             <div
-              class="flex flex-col pb-[20px] md:flex-row-reverse md:h-[316px] md:gap-[40px] md:justify-end md:items-start md:pb-0"
+              class="flex flex-col pb-5 md:flex-row-reverse md:h-[316px] md:gap-10 md:justify-end md:items-start md:pb-0"
             >
               <div>
-                <h3 class="text-font2229 text-heading md:pt-[69px] pb-2">
+                <h3 class="text-font2229 text-heading pb-2 md:pt-[70px]">
                   1. Pick your own schedule
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify pb-[20px] md:text-left md:w-[290px]"
+                  class="text-font1825 text-text text-justify pb-5 md:text-left md:w-72"
                 >
                   You have total control over your availability. Superpeer
                   checks your calendar and only accepts bookings when you are
                   free.
                 </p>
               </div>
-              <div
-                class="flex items-center justify-center md:w-[270px] md:h-[530px]"
-              >
+              <div class="md:w-[270px] md:h-[530px] mx-auto lg:mx-0">
                 <img
                   src="./src/images/section1-1.png"
                   alt="mobile with schedule"
@@ -196,14 +200,14 @@
               </div>
             </div>
             <div
-              class="flex flex-col md:flex-col-reverse mb-[19px] pb-[20px] mx-auto md:h-[600px] lg:h-[726px] md:justify-end md:gap-[40px] md:pb-0"
+              class="flex flex-col pb-10 mx-auto md:flex-col-reverse md:h-[600px] lg:h-[726px] md:justify-end md:gap-10 md:pb-0"
             >
               <div class="flex flex-col md:max-w-[335px]">
-                <h3 class="text-font2229 text-heading pb-[6px]">
+                <h3 class="text-font2229 text-heading pb-2">
                   2. Set your rate
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify pb-[17px] md:text-left"
+                  class="text-font1825 text-text text-justify pb-4 md:text-left"
                 >
                   Superpeer automatically collects payments for you via credit
                   card or PayPal with automatic refunds and no-show protection.
@@ -217,21 +221,21 @@
               </div>
             </div>
             <div
-              class="flex flex-col md:flex-row md:h-[189px] md:gap-[40px] md:items-end md:justify-end"
+              class="flex flex-col md:flex-row md:h-48 md:gap-10 md:items-end md:justify-end"
             >
               <div class="md:max-w-[330px]">
-                <h3 class="text-font2229 text-heading pb-2 md:text-right">
+                <h3 class="text-font2229 text-heading pb-2.5 md:text-right">
                   3. Meet right in the browser
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify pb-[20px] md:text-right"
+                  class="text-font1825 text-text text-justify pb-5 lg:pb-0 md:text-right"
                 >
                   No apps or downloads required. Simply hop into calls right
                   from the calendar invite into the browser.
                 </p>
               </div>
               <div
-                class="flex items-center justify-center pb-[20px] lg:w-[270px] lg:h-[530px]"
+                class="flex items-center justify-center pb-5 lg:pb-2 lg:w-[270px] lg:h-[530px]"
               >
                 <img
                   src="./src/images/section1-3.png"
@@ -243,30 +247,30 @@
         </div>
       </section>
       <section
-        class="bg-darkBg bg-gradient-to-b from-transparent via-transparent to-white bg-darkBg pt-[29px]"
+        class="bg-darkBg bg-gradient-to-b from-transparent via-transparent to-white bg-darkBg"
       >
-        <div class="px-2 max-w-[1045px] mx-auto">
+        <div class="px-2 max-w-[1045px] mx-auto pt-7">
           <h2
-            class="text-font2834 text-center text-heading sm:text-font5662 tracking-normal pt-8 md:pt-0 pb-[25px]"
+            class="text-font2834 text-center text-heading tracking-normal pb-6 sm:text-font5662"
           >
             Beautiful Livestreams
           </h2>
           <p
-            class="text-font1620 sm:text-font2028 pb-[30px] lg:pb-[100px] text-center text-text md:max-w-[674px] mx-auto"
+            class="text-font1620 text-center text-text mx-auto pb-7 sm:text-font2028 md:max-w-[674px] lg:pb-24"
           >
             Superpeer Channels allow you to host livestreams, build a community
             and earn with recurring monthly subscriptions.
           </p>
           <div class="flex flex-col">
             <div
-              class="flex flex-col md:flex-row-reverse md:h-[316px] md:gap-[40px] md:justify-end md:items-start"
+              class="flex flex-col md:flex-row-reverse md:h-[316px] md:gap-10 md:justify-end md:items-start"
             >
               <div class="md:w-[304px]">
-                <h3 class="text-font2229 text-heading md:pt-[69px] pb-2">
+                <h3 class="text-font2229 text-heading pb-2 md:pt-[69px]">
                   1. Turn your audience into subscribers
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify md:text-left pb-[20px] md:pb-0"
+                  class="text-font1825 text-text text-justify pb-5 md:text-left md:pb-0"
                 >
                   Superpeer channels are designed to accrue subscribers and
                   automatically send them a calendar invite each time you do
@@ -274,7 +278,7 @@
                 </p>
               </div>
               <div
-                class="flex items-center justify-center pb-[20px] md:pb-0 md:w-[270px] md:h-[530px]"
+                class="flex items-center justify-center pb-5 md:pb-0 md:w-[270px] md:h-[530px]"
               >
                 <img
                   src="./src/images/section2-1.png"
@@ -283,14 +287,14 @@
               </div>
             </div>
             <div
-              class="flex flex-col md:flex-col-reverse mx-auto md:justify-end md:gap-[36px] pb-[20px] md:pb-0 md:h-[600px] lg:h-[726px]"
+              class="flex flex-col md:flex-col-reverse mx-auto pb-5 md:justify-end md:gap-10 md:pb-0 md:h-[600px] lg:h-[726px]"
             >
               <div class="flex flex-col md:max-w-[312px]">
                 <h3 class="text-font2229 text-heading md:pb-2">
                   2. Livestream with small groups or thousands of viewers
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify md:text-left pb-[17px] md:pb-0"
+                  class="text-font1825 text-text text-justify md:text-left pb-4 md:pb-0"
                 >
                   Superpeer gives you tools to let your viewers go live with you
                   and speak, comment and upvote, and network with each other.
@@ -304,26 +308,25 @@
               </div>
             </div>
             <div
-              class="flex flex-col md:flex-row md:h-[187px] md:gap-[40px] md:items-end md:justify-end pb-[20px] md:pb-0"
+              class="flex flex-col md:flex-row md:h-[217px] md:gap-10 md:items-end md:justify-end"
             >
               <div class="md:max-w-[300px]">
-                <h3
-                  class="text-font2229 text-heading pb-2 md:pb-0 md:text-right"
-                >
+                <h3 class="text-font2229 text-heading pb-2.5 md:text-right">
                   3. Earn recurring revenue through subscriptions
                 </h3>
                 <p
-                  class="text-font1825 text-text text-justify lg:pt-2 pb-[20px] lg:pb-[13px] lg:text-right"
+                  class="text-font1825 text-text text-justify pb-5 lg:pb-2 md:text-right"
                 >
                   Sell tickets to streams, introduce channel subscription fees,
                   allow donations, or make it totally free.
                 </p>
               </div>
-              <div class="flex items-center justify-center">
+              <div
+                class="flex items-center justify-center pb-5 lg:pb-0 lg:w-[270px] lg:h-[530px]"
+              >
                 <img
                   src="./src/images/section2-3.png"
                   alt="mobile with meeting"
-                  class="lg:w-[270px] lg:h-[530px]"
                 />
               </div>
             </div>
@@ -331,26 +334,24 @@
         </div>
       </section>
       <section
-        class="px-2 pt-[30px] md:pt-[80px] pb-8 flex flex-col items-center justify-center text-text lg:pt-[262px] lg:pb-[260px]"
+        class="flex flex-col items-center justify-center text-text px-2 pt-8 pb-8 md:pt-20 lg:pt-64 lg:pb-72"
       >
         <h2
-          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] md:pb-[45px] lg:pb-[89px]"
+          class="text-font2834 text-center text-heading tracking-normal pb-5 pt-1 sm:text-font5562 md:pb-11 lg:pb-[89px]"
         >
           Features
         </h2>
         <div
-          class="grid gap-y-4 grid-cols-1 grid-rows-6 sm:gap-y-[32px] gap-x-[30px] sm:grid-cols-3 sm:grid-rows-2"
+          class="grid gap-y-4 gap-x-8 grid-cols-1 grid-rows-6 sm:gap-y-16 sm:grid-cols-3 sm:grid-rows-2"
         >
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[320px]">
             <img
               src="./src/images/feature-1.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               Subscriber Management Tools
             </h3>
@@ -359,16 +360,14 @@
               subscribers with email management and analytics tools.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[320px]">
             <img
               src="./src/images/feature-2.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               Recordings
             </h3>
@@ -377,16 +376,14 @@
               instantly for publishing and download.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[316px]">
             <img
               src="./src/images/feature-3.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               Transcription
             </h3>
@@ -395,16 +392,14 @@
               additional cost to you (coming soon!)
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[320px]">
             <img
               src="./src/images/feature-4.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               Members-only Channels
             </h3>
@@ -413,16 +408,14 @@
               channel. This is great for client-only or employee-only channels.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[320px]">
             <img
               src="./src/images/feature-5.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               No Monthly Costs
             </h3>
@@ -430,16 +423,14 @@
               Superpeer is free to use, we only make money when you make money.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-start pb-[31px] max-w-[320px]"
-          >
+          <div class="flex flex-col items-center justify-start max-w-[316px]">
             <img
               src="./src/images/feature-6.svg"
               alt="feature icon"
               class="w-[61px]"
             />
             <h3
-              class="text-font1926 sm:text-font2229 text-heading text-center pt-[17px] pb-2"
+              class="text-font1926 text-heading text-center pt-4 pb-2 sm:text-font2229"
             >
               No Expensive Gear Required
             </h3>
@@ -450,22 +441,22 @@
           </div>
         </div>
       </section>
-      <section class="bg-lightBg pt-[29px] pb-[59px] px-2">
+      <section class="bg-lightBg pt-8 pb-14 px-2">
         <h2
-          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] lg:pb-[67px]"
+          class="text-font2834 text-center text-heading tracking-normal pt-1 pb-5 sm:text-font5562 lg:pb-[68px]"
         >
           Pricing
         </h2>
-        <div class="relative lg:w-[886px] mx-auto">
-          <div class="swiper mySwiper static lg:w-[744px] h-[255px] px-1">
+        <div class="relative mx-auto lg:w-[894px]">
+          <div class="swiper mySwiper static px-1 lg:w-[744px] h-[255px]">
             <div class="swiper-wrapper">
               <div class="swiper-slide flex items-start justify-center">
                 <div
-                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                  class="flex flex-col items-center justify-center min-w-[240px] max-w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center py-10 px-19 sm:w-[348px]"
                 >
-                  <h4 class="text-font1926 pb-2.5">1:1 Calls</h4>
-                  <div class="text-font5050 pb-[26px]">
-                    <span class="line-through text-greyDark mr-4">10%</span>
+                  <h4 class="text-font1926 pb-3">1:1 Calls</h4>
+                  <div class="text-font5050 pb-6">
+                    <span class="line-through text-greyDark mr-2">10%</span>
                     <span>0%</span>
                   </div>
                   <p class="text-font1622 text-greyLight">
@@ -475,10 +466,10 @@
               </div>
               <div class="swiper-slide flex items-start justify-center">
                 <div
-                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                  class="flex flex-col items-center justify-center min-w-[240px] max-w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center py-10 px-19 sm:w-[348px]"
                 >
-                  <h4 class="text-font1926 pb-2.5">Channels</h4>
-                  <div class="text-font5050 pb-[26px]">
+                  <h4 class="text-font1926 pb-3">Channels</h4>
+                  <div class="text-font5050 pb-6">
                     <span>10%</span>
                   </div>
                   <p class="text-font1622 text-greyLight">
@@ -488,11 +479,11 @@
               </div>
               <div class="swiper-slide flex items-start justify-center">
                 <div
-                  class="flex flex-col items-center justify-center py-10 px-19 min-w-[240px] max-w-[348px] sm:w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center"
+                  class="flex flex-col items-center justify-center min-w-[240px] max-w-[348px] border rounded-xl bg-black text-white drop-shadow-xl border-heading rounded-lg text-center py-10 px-19 sm:w-[348px]"
                 >
-                  <h4 class="text-font1926 pb-2.5">1:1 Calls</h4>
-                  <div class="text-font5050 pb-[19px]">
-                    <span class="line-through text-greyDark mr-4">10%</span>
+                  <h4 class="text-font1926 pb-3">1:1 Calls</h4>
+                  <div class="text-font5050 pb-6">
+                    <span class="line-through text-greyDark mr-2">10%</span>
                     <span>0%</span>
                   </div>
                   <p class="text-font1622 text-greyLight">
@@ -525,21 +516,21 @@
         </div>
       </section>
       <section
-        class="flex flex-col items-center justify-center pt-8 lg:pt-[246px] px-2"
+        class="flex flex-col items-center justify-center pt-8 px-2 lg:pt-60"
       >
         <h2
-          class="text-font2834 text-center text-heading sm:text-font5562 tracking-normal pb-[20px] sm:pb-[25px]"
+          class="text-font2834 text-center text-heading tracking-normal pb-6 sm:text-font5562"
         >
           Ready&nbsp;to&nbsp;become&nbsp;a Superpeer?
         </h2>
         <p
-          class="text-font1620 sm:text-font2028 pb-8 text-center text-text max-w-[400px]"
+          class="text-font1620 text-center text-text max-w-[400px] pb-9 sm:text-font2028"
         >
           Build and grow your community face-to-face and make money while you do
           it.
         </p>
         <button
-          class="bg-accent uppercase h-12 flex items-center border rounded-sm font-sans text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-1"
+          class="flex items-center bg-accent uppercase h-12 border rounded-sm text-black text-font1620 px-8 hover:ring-2 hover:ring-text hover:ring-offset-1"
         >
           REQUEST INVITE
         </button>
@@ -547,15 +538,15 @@
     </main>
     <footer>
       <div
-        class="flex justify-center flex-col gap-8 pt-10 pb-10 sm:flex-row items-center justify-between md:pt-20 md:pb-20 lg:pt-[225px] lg:pb-[128px] text-font1624 text-heading w-full max-w-[1045px] mx-auto px-2"
+        class="flex flex-col items-center justify-around gap-8 text-font1624 text-heading w-full max-w-[1045px] mx-auto px-2 py-10 sm:flex-row md:py-20 lg:pt-56 lg:pb-32"
       >
-        <ul class="flex gap-8 sm:w-1/3">
+        <ul class="flex gap-8 text-left sm:w-1/3">
           <li><a href="#" class="hover:underline">Blog</a></li>
           <li><a href="#" class="hover:underline">FAQ</a></li>
           <li><a href="#" class="hover:underline">Privacy</a></li>
           <li><a href="#" class="hover:underline">Terms</a></li>
         </ul>
-        <div class="flex justify-center sm:w-1/3 gap-6">
+        <div class="flex justify-center gap-6 sm:w-1/3">
           <a href="https://twitter.com/" target="_blank"
             ><img
               src="./src/images/twitter.svg"
@@ -569,7 +560,7 @@
               class="hover:scale-150"
           /></a>
         </div>
-        <p class="sm:w-1/3 text-right">Superpeer, Inc.</p>
+        <p class="text-right sm:w-1/3">Superpeer, Inc.</p>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
